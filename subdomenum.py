@@ -11,4 +11,7 @@ def zone_transfer_check (domain, dns_server):
     zone = dns.zone.from_xfr(dns.query.xfr(dns_server, domain))
     if zone:
       print (f"Zone transfer available on {dns_server} !!")
+      print ('Zone Data :')
+      for name,node in zone.node.items():
+        
       
